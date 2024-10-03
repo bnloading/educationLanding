@@ -131,7 +131,7 @@
   padding: 100px 370px;
   align-items: center;
   gap: 4px;
-  z-index: 101;
+  z-index: 300;
 }
 .modalMainImage {
   margin-top: 0;
@@ -247,6 +247,12 @@
   flex: 1 0 0;
   align-self: stretch;
   text-align: center;
+  color: #023400;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 120%; /* 14.4px */
 }
 
 .button {
