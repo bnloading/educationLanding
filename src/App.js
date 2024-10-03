@@ -7,6 +7,7 @@ import Hero from "./component/Hero/Hero";
 import Navbar from "./component/Navbar/Navbar";
 import ConsultationForm from "./component/Sub/Sub";
 import coursesData from "./courses.json";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   return (
