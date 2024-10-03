@@ -7,7 +7,6 @@ import Hero from "./component/Hero/Hero";
 import Navbar from "./component/Navbar/Navbar";
 import ConsultationForm from "./component/Sub/Sub";
 import coursesData from "./courses.json";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
       <div id="calendar">
         <ConsultationForm />
       </div>
-      <SpeedInsights />
     </div>
   );
 }
