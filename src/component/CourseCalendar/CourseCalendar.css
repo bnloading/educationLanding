@@ -1,0 +1,95 @@
+.course-calendar {
+  font-family: "Arial", sans-serif;
+  background-color: #000000; /* Dark background */
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin-top: 100px;
+  padding-inline: 50px;
+  margin-bottom: 100px;
+  /* Top margin */
+}
+
+.course-calendar h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  display: block;
+  overflow-x: auto;
+  border-radius: 20px;
+  background-color: #333; /* Allow horizontal scroll */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* Set a minimum width to enable scrolling */
+}
+
+th,
+td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  position: sticky; /* Stick the header */
+  top: 0; /* Stick to the top */
+  z-index: 2; /* Ensure it stays above other rows */
+}
+
+td:first-child {
+  position: sticky; /* Stick the first column */
+  left: 0; /* Stick to the left */
+  background-color: #444; /* Background for sticky column */
+  z-index: 1; /* Ensure it stays above other columns */
+}
+
+tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+tr:hover {
+  background-color: #444;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+  .course-calendar {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  h1 {
+    font-size: 24px; /* Adjust header font size for mobile */
+  }
+
+  table {
+    min-width: 600px; /* Adjust minimum width for mobile */
+  }
+
+  th,
+  td {
+    padding: 8px; /* Reduce padding for table cells */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  /* Stack the table content for small screens */
+  .table-container {
+    display: block;
+  }
+
+  table {
+    display: block; /* Ensure the table is block for scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  th {
+    font-size: 14px; /* Smaller font size for headers */
+  }
+}

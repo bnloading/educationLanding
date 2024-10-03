@@ -1,0 +1,190 @@
+/* Logo styling */
+.Logo {
+  color: #00e531;
+  font-family: "Roboto", "SF Pro", sans-serif;
+  font-size: 32px;
+  font-weight: 590;
+}
+
+/* Navbar styling */
+.navbar {
+  margin-inline: 50px;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 200;
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 50px;
+  transition: all 0.3s ease;
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-content: center; /* Center the navbar items when sticky */
+}
+
+/* Navbar items container */
+.navbar-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 789px;
+  background: linear-gradient(
+    91deg,
+    rgba(167, 167, 167, 0.14) -3.53%,
+    rgba(167, 167, 167, 0.14) 106.6%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  z-index: 10;
+  height: 65px;
+}
+
+.navbar-items.sticky {
+  position: static; /* Change from fixed to static */
+  width: auto;
+  padding: 0 20px;
+  background-color: transparent; /* Remove background when sticky */
+  transition: all 0.3s ease;
+}
+
+/* Navigation items styling */
+.items {
+  color: white;
+  padding: 8px 18px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.items:hover {
+  background-color: green;
+  border-radius: 50px;
+}
+
+/* Icons container */
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Individual icon styling */
+.icons {
+  padding: 5px;
+  background-color: #023400;
+  margin-left: 10px;
+  border-radius: 50px;
+}
+
+.icons2 {
+  padding: 5px;
+  background-color: #023400;
+  margin-left: 10px;
+  border-radius: 30px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.icons,
+.icons2 {
+  margin-left: 10px; /* Adjust spacing as needed */
+}
+
+.iconsmenu {
+  cursor: pointer; /* Ensures the cursor changes to a pointer */
+  z-index: 10; /* Ensure it's above other elements */
+  position: relative; /* Positioning to use z-index effectively */
+}
+/* Modal styling */
+/* Modal styles (if needed) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+}
+
+.modal-content {
+  background-color: #fff; /* Modal background */
+  padding: 20px; /* Padding around modal content */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.modal-item {
+  display: block;
+  margin: 10px 0;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Close button styling */
+.close {
+  color: #000;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hamburger menu styling */
+.iconsmenu {
+  display: none; /* Hidden by default */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Mobile */
+  .navbar-items {
+    display: none; /* Hide navbar items in mobile */
+  }
+
+  .iconsmenu {
+    display: block; /* Show hamburger menu */
+  }
+
+  .icon-container .icons,
+  .icon-container .icons2 {
+    display: none; /* Hide global and search icons */
+  }
+
+  .navbar.sticky {
+    justify-content: flex-end; /* Align hamburger menu to the right when sticky on mobile */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet */
+  .items {
+    font-size: 10px;
+    margin: 0;
+  }
+  .Logo {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Desktop */
+  .iconsmenu {
+    display: none; /* Hide hamburger menu */
+  }
+}

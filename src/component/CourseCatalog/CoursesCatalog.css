@@ -1,0 +1,422 @@
+.course-catalog {
+  background-color: black;
+  padding: 20px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  align-items: center;
+  /* Align icons and text */
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+
+  justify-content: center;
+}
+
+.categories img {
+  width: 24px; /* Adjust icon size as needed */
+  height: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.categories button {
+  background: none;
+  border: none;
+  color: #777;
+  padding: 5px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.categories button:hover,
+.categories button.active {
+  color: #fff;
+  border-bottom-width: 1px #00e531;
+}
+
+.categories button:first-child {
+  color: #00e531;
+}
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 276px;
+  margin-left: 12px;
+}
+.modal-content p {
+  color: black;
+}
+.textrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+  padding: 5px;
+  align-items: center;
+
+  white-space: nowrap; /* Add this property */
+  overflow: hidden; /* Add this property */
+  text-overflow: ellipsis; /* Add this property */
+}
+.texts {
+  color: var(--Text-Gray-Gray-520, #74767a);
+
+  /* Desktop/Text, 12px, medium */
+  font-family: "SF Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 120%; /* 14.4px */
+}
+
+/* Courses Grid */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(404px, 1fr)
+  ); /* Adjusted minmax for card size */
+  gap: 32px;
+}
+
+/* Course Card */
+.bordersolid {
+  width: 420px;
+
+  border-radius: 20px;
+  padding: 48px 48px 32px 48px;
+  border: 2px solid #313133;
+  padding: 20px 30px; /* Adjusted padding */
+  background-color: black; /* Background for the entire card area */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.cardBottom {
+  /* Full width within the card */
+
+  background-color: #232324;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 0px;
+  padding: 24px; /* Space between image and cardBottom */
+}
+
+.cardBottom img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  padding: 100px 370px;
+  align-items: center;
+  gap: 4px;
+  z-index: 101;
+}
+.modalMainImage {
+  margin-top: 0;
+
+  flex-shrink: 0;
+}
+.modalMainImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: rgba(58, 59, 61, 1);
+
+  /* Hide scrollbars */
+  scrollbar-width: none; /* Firefox */
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and other WebKit browsers */
+}
+
+.MainView {
+  padding-inline: 50px;
+  margin-top: -130px;
+  backdrop-filter: blur(50px);
+  margin-bottom: 50px;
+}
+.MainView h2 {
+  color: var(--Text-Gray-Gray-0, var(--White-1000, #fff));
+
+  /* Desktop/H3, 32px, semibold */
+  font-family: "SF Pro";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 120%;
+  text-align: left; /* 38.4px */
+}
+.modalmain {
+  color: var(--Text-Gray-Gray-0, var(--White-1000, #fff));
+
+  /* Desktop/Text, 24px, semibold */
+  font-family: "SF Pro";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 110%;
+  text-align: left; /* 26.4px */
+}
+.BottomView {
+  padding-inline: 50px;
+}
+.BottomView ul {
+  color: var(--Text-Gray-Gray-320, #a5a7ad);
+  font-family: "SF Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  text-align: left;
+  margin-bottom: 40px; /* 20.8px */
+}
+.ModalButton1 {
+  display: flex;
+
+  width: 400px;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: var(--Background-Green-500, #1ee600);
+  margin-bottom: 16px;
+  color: black;
+}
+.borderwidth {
+  width: 100%;
+  border-bottom-width: 1px;
+  border-color: gray;
+  margin-bottom: 40px;
+}
+.MainView ul {
+  text-align: left;
+  color: var(--Text-Gray-Gray-320, #e8e9ed);
+
+  /* Desktop/Text, 16px, medium */
+  font-family: "SF Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 130%; /* 20.8px */
+}
+
+.button2 {
+  background-color: #1ee600;
+  color: black;
+
+  cursor: pointer;
+  border-radius: 8px;
+
+  display: flex;
+  padding: 8px 16px;
+
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  text-align: center;
+}
+
+.button {
+  background-color: #3a3b3d;
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px;
+  flex: 1 0 0;
+
+  align-self: stretch;
+  text-align: center;
+}
+.Buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  width: 100%;
+}
+.button2 :nth-child(1):hover {
+  transform: rotate(-45deg);
+  transition-timing-function: ease-in-out;
+  transition: 300ms;
+  margin-left: 5px;
+}
+.custom-text {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-weight: 500;
+  text-align: center; /* Keep text centered */
+  line-height: 110%;
+  font-family: "Roboto Mono", monospace;
+  width: 276px;
+  max-height: 44px;
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Add ellipsis (...) */
+  white-space: nowrap; /* Keep the text on one line */
+  margin-right: auto; /* Auto margins to center the element */
+  margin-left: auto;
+}
+
+.textrow p {
+  color: var(--Text-Gray-Gray-520, #74767a);
+
+  /* Desktop/Text, 12px, medium */
+  font-family: "SF Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 120%; /* 14.4px */
+  margin-left: 4px;
+}
+/* Tablet View */
+@media (max-width: 1024px) {
+  .course-catalog {
+    padding: 15px; /* Reduce padding */
+  }
+
+  .categories {
+    flex-direction: row; /* Stack categories vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .categories button {
+    margin: 0px 0; /* Space between category buttons */
+  }
+
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(300px, 1fr)
+    ); /* Adjust card size for tablets */
+  }
+
+  .bordersolid {
+    width: 100%; /* Full width for course card */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .modal-content {
+    padding: 15px; /* Reduce padding in modal */
+  }
+
+  .custom-text {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .textContainer {
+    width: auto; /* Allow full width for textContainer */
+  }
+
+  .textrow p {
+    font-size: 12px; /* Smaller text size for tablet */
+  }
+}
+
+/* Mobile View */
+/* Mobile View */
+@media (max-width: 768px) {
+  .course-catalog {
+    margin-left: auto;
+    margin-right: auto; /* Center the catalog */
+    padding: 10px; /* Reduce overall padding */
+  }
+
+  .categories {
+    flex-direction: row; /* Keep categories in a row */
+    align-items: center;
+    justify-content: center; /* Center categories */
+    width: 100%; /* Full width for categories */
+    overflow-x: auto; /* Allow horizontal scroll if needed */
+    padding: 5px; /* Adjust padding for mobile */
+    margin-bottom: 10px; /* Reduce margin below categories */
+  }
+
+  .categories img {
+    width: 20px; /* Smaller icon size */
+    height: 20px; /* Smaller icon size */
+    margin-right: 5px; /* Space between icon and text */
+  }
+
+  .categories button {
+    width: auto; /* Adjust button width */
+    padding: 5px 10px; /* Smaller button padding */
+    margin: 0 5px; /* Space between category buttons */
+    font-size: 14px; /* Smaller font size for mobile */
+    transition: color 0.2s; /* Smooth hover effect */
+  }
+
+  .categories button:hover,
+  .categories button.active {
+    color: #fff; /* Highlight active button */
+    border-bottom: 2px solid #00e531; /* Highlight active button */
+  }
+
+  .courses {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 20px; /* Adjust gap between cards */
+  }
+
+  .bordersolid {
+    width: 100%; /* Full width for course card */
+    padding: 20px; /* Adjust padding for smaller screens */
+    border-radius: 10px; /* Smaller border radius */
+  }
+
+  .cardBottom img {
+    height: 100px; /* Smaller image size */
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+
+  .modal-content {
+    padding: 10px; /* Reduce padding in modal */
+    max-height: 70vh; /* Limit modal height on mobile */
+  }
+
+  .custom-text {
+    font-size: 16px; /* Adjust font size */
+    margin: 10px 0; /* Add margin for spacing */
+  }
+
+  .textrow p {
+    font-size: 10px; /* Smaller text size for mobile */
+    margin: 0; /* Remove margin for a tighter layout */
+  }
+}

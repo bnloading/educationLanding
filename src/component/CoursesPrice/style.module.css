@@ -1,0 +1,206 @@
+.courseCatalog {
+  font-family: "SF Pro", sans-serif;
+  max-width: 888px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  color: #ffffff;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px; /* Adjust as needed */
+}
+
+/* Styles for when there's only one or two courses */
+.courseGrid.single-item {
+  grid-template-columns: 1fr;
+}
+
+.courseGrid.two-items {
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 120%;
+}
+
+.categoryButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.categoryButtons button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categoryButtons button.active {
+  background-color: #00ff00;
+  color: #000;
+}
+
+/* Card Styling */
+.courseCard {
+  background-color: #2a2a2a;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 420px; /* Default width for larger screens */
+  height: 834px;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  gap: 40px;
+  position: relative; /* Ensure position is relative for hover effect */
+}
+
+.courseCard:hover {
+  transform: translateY(-10px); /* Lifts the card on hover */
+}
+
+.courseCard::before {
+  content: "";
+  position: absolute;
+  top: -20px; /* Position it above the card */
+  left: 30%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 200px; /* Adjust size of the circle */
+  height: 200px; /* Adjust size of the circle */
+  background: rgba(242, 236, 236, 0.6); /* White glow color */
+  border-radius: 50%; /* Make it circular */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Glow effect */
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.3s ease;
+  filter: blur(100px); /* Transition for opacity */
+}
+
+.courseCard:hover::before {
+  opacity: 0.3; /* Make it visible on hover */
+}
+
+.courseCard h2 {
+  margin-top: 0;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Button Styling */
+.registerButton {
+  background-color: #023400;
+  color: #1ee600;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.registerButton:hover {
+  background-color: #1ee600;
+  color: black; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+.arrow:hover {
+  color: black;
+}
+
+/* Course details */
+.courseDetails {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.courseDetails li {
+  color: #74767a;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "SF Pro";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 129.412% */
+  letter-spacing: -0.43px;
+}
+
+.courseDetails li:hover {
+  color: #74767a; /* Changes text color on hover */
+}
+
+.check {
+  display: flex;
+  align-items: center; /* Ensure items are vertically aligned */
+  gap: 10px;
+}
+
+.check svg {
+  width: calc(1em); /* Sets icon size relative to font size */
+  height: calc(1em);
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .courseCatalog {
+    padding: 0 20px; /* Add padding for mobile */
+  }
+
+  h1 {
+    font-size: 36px; /* Smaller font size for mobile */
+  }
+
+  .courseGrid {
+    gap: 24px; /* Reduce gap between items */
+  }
+
+  .courseCard {
+    width: 100%; /* Make cards full width on mobile */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Less padding for mobile */
+  }
+
+  .price {
+    font-size: 20px; /* Smaller price text */
+  }
+
+  .registerButton {
+    padding: 12px; /* Smaller padding for buttons */
+  }
+
+  .courseDetails li {
+    font-size: 15px; /* Smaller text for details */
+  }
+}

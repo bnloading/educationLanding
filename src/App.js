@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import "./App.css";
+import CourseCalendar from "./component/CourseCalendar/CourseCalendar";
+import Courses from "./component/Courses/Courses";
+import CoursePrice from "./component/CoursesPrice/CoursesPrice";
+import Hero from "./component/Hero/Hero";
+import Navbar from "./component/Navbar/Navbar";
+import ConsultationForm from "./component/Sub/Sub";
+import coursesData from "./courses.json";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="scrollable-container">
+      <Navbar />
+      <div id="hero">
+        <Hero />
+      </div>
+      <div id="courses">
+        <Courses />
+      </div>
+      <div id="pricing">
+        <CoursePrice data={coursesData} />
+      </div>
+      <div id="calendar">
+        <CourseCalendar />
+      </div>
+      <div id="calendar">
+        <ConsultationForm />
+      </div>
     </div>
   );
 }

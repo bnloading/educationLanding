@@ -1,0 +1,148 @@
+.gradiant {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #1ee600;
+  filter: blur(250px);
+  opacity: 0.4;
+  z-index: 1;
+}
+.threeDImage {
+  position: absolute; /* Position it absolutely within the Hero */
+  width: 88px; /* Set the width of the image */
+  height: 89px; /* Maintain aspect ratio */
+  z-index: 4; /* Ensure it appears above the gradient and text */
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.text1 {
+  color: var(--Background-Green-500, #1ee600);
+  text-align: center;
+  font-family: "SF Pro", "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 510;
+  line-height: 130%;
+}
+
+.thunder {
+  margin-right: 10px;
+}
+
+.herotext {
+  text-align: center;
+  font-family: "SF Pro", "Roboto", sans-serif;
+  font-size: 52px;
+  font-weight: 590;
+  line-height: 120%;
+  color: white;
+  position: relative;
+  z-index: 3;
+}
+
+.herotextcontainer {
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.Herocontainer {
+  width: 728px;
+  height: 306px;
+}
+
+.text1Container {
+  margin-top: 80px;
+  width: 501px;
+  height: 44px;
+  border-radius: 33px;
+  background-color: #023400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Mobile */
+  .Herocontainer {
+    width: 428px;
+    height: 206px;
+  }
+
+  .herotext {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .text1Container {
+    visibility: hidden; /* Hide the element but keep space */
+  }
+  .threeDImage {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Tablet */
+  .Herocontainer {
+    width: 600px;
+    height: 250px;
+  }
+
+  .herotext {
+    font-size: 40px;
+    font-weight: 550;
+    line-height: 110%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text1Container {
+    margin-top: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .threeDImage {
+    display: none; /* Slightly smaller width for tablet */
+  }
+}
+
+@media (min-width: 1025px) {
+  /* Desktop */
+  .Herocontainer {
+    width: 728px;
+    height: 306px;
+  }
+  .threeDImage {
+    width: 88px;
+    height: 89px;
+    /* Smaller width for mobile */
+  }
+
+  .herotext {
+    font-size: 52px;
+    font-weight: 590;
+    line-height: 120%;
+  }
+
+  .text1Container {
+    margin-top: 80px;
+    width: 501px;
+    margin-left: 100px;
+  }
+}

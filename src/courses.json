@@ -1,0 +1,207 @@
+{
+    "categories": [
+        "Все",
+        "CompTIA",
+        "CCNA",
+        "CrowdStrike",
+        "IBM",
+        "Splunk"
+    ],
+    "courses": [
+        {
+            "category": "CompTIA",
+            "items": [
+                {
+                    "id": 1,
+                    "title": "CompTIA Network+",
+                    "price": 720000,
+                    "image": "./assets/course1.png",
+                    "imageDetails": "The image shows the official CompTIA Network+ certification logo with a networking theme.",
+                    "duration": "5 ",
+                    "lessons": 20,
+                    "students": 1500,
+                    "details": [
+                        "5-дневный онлайн-курс обучения под руководством инструктора",
+                        "Официальная учебная программа CompTIA",
+                        "%80 практических упражнений с Packet Tracer",
+                        "В стоимость включен ваучер на экзамен (не нужно покупать экзамен)",
+                        "Предэкзаменационная консультация",
+                        "Оплата кредитной картой",
+                        "Распределение времени занятий по классам",
+                        "Срок действия видеокурса — один год",
+                        "Действия Native Packet Tracer"
+                    ],
+                    "details2": [
+                        "Open Systems Interconnection (OSI) model layers and encapsulation concepts.",
+                        "Network topologies and network types.",
+                        "Types of cables and connectors.",
+                        "IP addressing and subnetting.",
+                        "Common services and protocols.",
+                        "Network devices.",
+                        "Basic corporate and datacenter network architecture.",
+                        "Cloud concepts and connectivity options."
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "CompTIA Security+",
+                    "price": 899990,
+                    "image": "./assets/course2.png",
+                    "imageDetails": "The image displays the CompTIA Security+ logo with a focus on cybersecurity themes.",
+                    "duration": "6 ",
+                    "lessons": 25,
+                    "students": 1800,
+                    "details": [
+                        "10-дневный онлайн-курс обучения под руководством инструктора",
+                        "Официальная учебная программа CompTIA",
+                        "%80 практических упражнений с Packet Tracer",
+                        "В стоимость включен ваучер на экзамен (не нужно покупать экзамен)",
+                        "Предэкзаменационная консультация",
+                        "Оплата кредитной картой",
+                        "Распределение времени занятий по классам",
+                        "Срок действия видеокурса — один год",
+                        "Действия Native Packet Tracer"
+                    ],
+                    "details2": [
+                        "Open Systems Interconnection (OSI) model layers and encapsulation concepts.",
+                        "Network topologies and network types.",
+                        "Types of cables and connectors.",
+                        "IP addressing and subnetting.",
+                        "Common services and protocols.",
+                        "Network devices.",
+                        "Basic corporate and datacenter network architecture.",
+                        "Cloud concepts and connectivity options."
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "CCNA",
+            "items": [
+                {
+                    "id": 3,
+                    "title": "CCNA Routing and Switching",
+                    "price": 750000,
+                    "image": "./assets/course3.png",
+                    "imageDetails": "This image shows Cisco's CCNA certification with networking equipment and infrastructure components.",
+                    "duration": "8 ",
+                    "lessons": 30,
+                    "students": 2000,
+                    "details": [
+                        "Комплексное обучение сетевым технологиям Cisco",
+                        "Практика на реальном оборудовании Cisco",
+                        "Подготовка к сертификационному экзамену CCNA",
+                        "Доступ к виртуальным лабораториям",
+                        "Консультации с сертифицированными инструкторами Cisco"
+                    ],
+                    "details2": [
+                        "Open Systems Interconnection (OSI) model layers and encapsulation concepts.",
+                        "Network topologies and network types.",
+                        "Types of cables and connectors.",
+                        "IP addressing and subnetting.",
+                        "Common services and protocols.",
+                        "Network devices.",
+                        "Basic corporate and datacenter network architecture.",
+                        "Cloud concepts and connectivity options."
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "CrowdStrike",
+            "items": [
+                {
+                    "id": 4,
+                    "title": "CrowdStrike Falcon Platform",
+                    "price": 680000,
+                    "image": "./assets/course3.png",
+                    "imageDetails": "The image features the CrowdStrike Falcon logo, representing cybersecurity defense mechanisms.",
+                    "duration": "4 ",
+                    "lessons": 15,
+                    "students": 1200,
+                    "details": [
+                        "Углубленное изучение платформы CrowdStrike Falcon",
+                        "Практические занятия по обнаружению и реагированию на угрозы",
+                        "Анализ вредоносного ПО и расследование инцидентов",
+                        "Настройка и оптимизация политик безопасности",
+                        "Сертификационная подготовка CrowdStrike"
+                    ],
+                    "details2": [
+                        "Open Systems Interconnection (OSI) model layers and encapsulation concepts.",
+                        "Network topologies and network types.",
+                        "Types of cables and connectors.",
+                        "IP addressing and subnetting.",
+                        "Common services and protocols.",
+                        "Network devices.",
+                        "Basic corporate and datacenter network architecture.",
+                        "Cloud concepts and connectivity options."
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "IBM",
+            "items": [
+                {
+                    "id": 5,
+                    "title": "IBM Cloud Fundamentals",
+                    "price": 550000,
+                    "image": "./assets/course5.png",
+                    "imageDetails": "The image showcases IBM Cloud, symbolizing cloud computing services and infrastructure.",
+                    "duration": "3 ",
+                    "lessons": 12,
+                    "students": 1000,
+                    "details": [
+                        "Введение в облачные технологии IBM",
+                        "Развертывание приложений в IBM Cloud",
+                        "Управление контейнерами с IBM Kubernetes Service",
+                        "Основы безопасности в облаке IBM",
+                        "Практические лабораторные работы"
+                    ],
+                    "details2": [
+                        "Open Systems Interconnection (OSI) model layers and encapsulation concepts.",
+                        "Network topologies and network types.",
+                        "Types of cables and connectors.",
+                        "IP addressing and subnetting.",
+                        "Common services and protocols.",
+                        "Network devices.",
+                        "Basic corporate and datacenter network architecture.",
+                        "Cloud concepts and connectivity options."
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Splunk",
+            "items": [
+                {
+                    "id": 6,
+                    "title": "Splunk Fundamentals",
+                    "price": 620000,
+                    "image": "./assets/course6.png",
+                    "imageDetails": "The image represents Splunk data analytics, highlighting log collection and analysis.",
+                    "duration": "4 ",
+                    "lessons": 16,
+                    "students": 1300,
+                    "details": [
+                        "Основы работы с платформой Splunk",
+                        "Сбор, индексация и поиск данных",
+                        "Создание отчетов и дашбордов",
+                        "Анализ безопасности с использованием Splunk",
+                        "Подготовка к сертификации Splunk Core Certified User"
+                    ],
+                    "details2": [
+                        "Open Systems Interconnection (OSI) model layers and encapsulation concepts.",
+                        "Network topologies and network types.",
+                        "Types of cables and connectors.",
+                        "IP addressing and subnetting.",
+                        "Common services and protocols.",
+                        "Network devices.",
+                        "Basic corporate and datacenter network architecture.",
+                        "Cloud concepts and connectivity options."
+                    ]
+                }
+            ]
+        }
+    ]
+}
