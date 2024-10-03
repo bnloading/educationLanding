@@ -1,0 +1,172 @@
+.container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  padding: 0px 50px 100px 50px;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  padding-inline: 50px;
+}
+
+.form {
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    180deg,
+    rgba(205, 205, 205, 0.1) 0%,
+    rgba(166, 166, 166, 0.1) 100%
+  );
+  backdrop-filter: blur(25px);
+  width: 1103px;
+  height: auto; /* Adjust height to fit content */
+}
+
+.title-con {
+  width: 659px;
+  height: 124px;
+  margin-bottom: 30px;
+  margin-top: -40px;
+}
+
+.title {
+  text-align: center;
+
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 590;
+  line-height: 120%;
+  color: white;
+  z-index: 2;
+  font-family: "Roboto" sans-serif;
+}
+.gradiant {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 787px;
+  height: 622px;
+  border-radius: 50%;
+  background: #1ee600;
+  filter: blur(152px);
+  opacity: 0.4;
+  z-index: 1;
+}
+.form-row,
+.form2,
+.form3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px; /* Spacing between inputs */
+}
+
+.form3 {
+  justify-content: center;
+}
+
+.form3 button {
+  margin-top: -25px;
+  margin-left: -20px;
+}
+
+.form h1 {
+  color: #c4c6cc;
+  font-family: "Roboto" sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0.4px;
+  flex-wrap: nowrap;
+}
+
+.input1,
+.input2,
+.input3 {
+  background-color: transparent;
+  border: none;
+  color: var(--Text-Gray-Gray-680, #4d4e52);
+  font-family: "Roboto";
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0.4px;
+  border-bottom-width: 1px;
+  margin-top: -20px;
+}
+
+.input1 {
+  width: 25%;
+}
+
+.input2 {
+  width: 30%;
+}
+
+.input3 {
+  width: 37%;
+}
+
+.input1::placeholder,
+.input2::placeholder,
+.input3::placeholder {
+  color: rgba(77, 78, 82, 1); /* Set the placeholder color to red */
+}
+
+/* Ensure transparent background even when autofilled */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  color: var(--Text-Gray-Gray-680, #4d4e52) !important;
+}
+
+/* Input focus style */
+.input1:focus,
+.input2:focus,
+.input3:focus {
+  outline: none;
+  border-bottom: 2px solid #4d4e52;
+}
+
+/* Error state for invalid inputs */
+.input-error {
+  color: red;
+  border-bottom: 2px solid red !important;
+}
+
+.submit-button {
+  display: flex;
+  width: 141px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  background: var(--Background-Green-500, #1ee600);
+  box-shadow: 0px 20px 35px 0px rgba(30, 230, 0, 0.2);
+}
+
+.submit-button:hover {
+  background-color: #3c3d40; /* Change color on hover */
+}

@@ -1,60 +1,91 @@
 import React, { useState } from "react";
-import "./Sub.css";
-const ConsultationForm = () => {
+import forumback from "../../assets/square pattern.svg";
+import "./Sub.css"; // Assuming you have an external CSS file
+import { PaperPlaneTilt } from "@phosphor-icons/react";
+const ConsultationPage = () => {
   const [name, setName] = useState("");
   const [course, setCourse] = useState("");
-  const [message, setMessage] = useState("");
-
+  const [email, setEmail] = useState(""); // Renamed for clarity
+  const [additionalInfo, setAdditionalInfo] = useState(""); // State for the third form input
+  const [emailValid, setEmailValid] = useState(true);
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Here you would handle form submission, e.g., send data to a server
-    console.log("Form submitted:", { name, course, message });
+    if (!email.includes("@")) {
+      setEmailValid(false); // Set invalid if '@' is missing
+      return;
+    }
+    setEmailValid(true);
+    console.log("Form submitted:", { name, course, email });
   };
-
   return (
-    <div className="consultation-form">
-      <h2 style={{ color: "green" }}>
-        Привет! Мы готовы вас проконсультировать
-      </h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Меня зовут</label>
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Фамилия и имя"
-            required
-          />
+    <div className="container">
+      <img src={forumback} alt="background pattern" className="background" />
+      <div className="gradiant"></div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div className="title-con">
+          <h2 className="title">Привет! Мы готовы вас проконсультировать</h2>
         </div>
-        <div className="form-group">
-          <label htmlFor="course">и мне интересно</label>
-          <input
-            type="text"
-            id="course"
-            value={course}
-            onChange={(e) => setCourse(e.target.value)}
-            placeholder="Название курса"
-          />
+        <div className="form" onSubmit={handleSubmit}>
+          <div className="form-row">
+            <h1>Меня зовут</h1>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="фамилия и имя"
+              className="input1"
+            />
+
+            <h1>и мне интересно</h1>
+            <input
+              type="text"
+              id="course"
+              value={course}
+              onChange={(e) => setCourse(e.target.value)}
+              placeholder="название курса"
+              className="input1"
+            />
+          </div>
+
+          <div className="form2">
+            <h1>Пожалуйста, свяжитесь со мной по адресу</h1>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="name@example.com"
+              className={`input2 ${!emailValid ? "input-error" : ""}`}
+            />
+          </div>
+
+          {/* Third Form Section */}
+          <div className="form3">
+            <h1>По желанию я поделюсь еще:</h1>
+            <input
+              type="text"
+              id="additionalInfo"
+              value={additionalInfo}
+              onChange={(e) => setAdditionalInfo(e.target.value)}
+              placeholder="Ваше сообщение здесь"
+              className="input3"
+            />
+            <button type="submit" className="submit-button">
+              <p>Отправить</p>
+              <PaperPlaneTilt size={16} />
+            </button>
+          </div>
         </div>
-        <p>
-          Пожалуйста, свяжитесь со мной по адресу{" "}
-          <a href="mailto:name@example.com">name@example.com</a>
-        </p>
-        <div className="form-group">
-          <label htmlFor="message">По желанию я поделюсь еще:</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder="Ваше сообщение здесь"
-          />
-        </div>
-        <button type="submit">Отправить</button>
-      </form>
+      </div>
     </div>
   );
 };
 
-export default ConsultationForm;
+export default ConsultationPage;

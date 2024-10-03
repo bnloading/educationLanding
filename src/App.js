@@ -24,7 +24,7 @@ function App() {
       <div id="calendar">
         <CourseCalendar />
       </div>
-      <div id="calendar">
+      <div id="contact">
         <ConsultationForm />
       </div>
     </div>

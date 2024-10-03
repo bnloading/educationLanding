@@ -92,7 +92,7 @@ const Navbar = () => {
               <a className="modal-item" href="#about">
                 О нас
               </a>
-              <a className="modal-item" href="#contact">
+              <a className="modal-item" href="#Form">
                 Контакт
               </a>
             </div>
